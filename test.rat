@@ -1,0 +1,125 @@
+integer process, x;
+
+(* Prints first n fibonaci numbers where n is taken as input *)
+procedure fibonaci
+    integer a, b, c;
+    {
+        read (a);
+        b := 1;
+        c := 1;
+        while (a <> 0) do {
+            a := a -1;
+            print(c);
+            c := c + b;
+            b := c - b;
+        } od;
+    };
+
+(* Prints boolean value tt if n is prime else ff where n is taken as input *)
+procedure isprime
+    integer a, b;
+    boolean check;
+    {
+        read (a);
+        b := 2;
+        check := tt;
+        while (b < a) do {
+            check := check && (a%b <> 0);
+            b := b + 1;
+        } od;
+        print(check);
+    };
+
+(* Finds factorial of a number via recursion *)
+procedure factorial
+    integer a, b;
+    procedure helper_factorial
+        {
+            if a <= 0 then {
+                b := b * 1;
+            }
+            else {
+                b := b * a;
+                a := a - 1;
+                call helper_factorial;
+            } fi;
+        };
+    {
+        read (a);
+        b := 1;
+        call helper_factorial;
+        print(b);
+    };
+
+(* Finds sum of gp and compare it with infinite gp sum *)
+procedure gp
+    rational x, sum, prod;
+    integer a;
+    {
+        read (x);
+        read (a);
+        if ((x < rat(1)) && (x > rat(~1))) then {
+            print(rat(1) ./. (rat(1) .-. x));
+            sum := rat(0);
+            prod := rat(1);
+            while (a > 0) do {
+                sum := sum .+. prod;
+                prod := prod .*. x;
+                a := a - 1;
+            } od;
+            print (sum);
+        }
+        else {
+            print(~1);
+        } fi;
+    };
+
+(* Procedure to check static scoping *)
+procedure f
+    {
+        print(x);
+    };
+
+procedure staticscope
+    integer x;
+    {
+        x := 5;
+        call f;
+    };
+
+(* Main: Takes a number n as input
+If n = 1 then calls fibonaci
+If n = 2 then calls isprime
+If n = 3 then calls factorial
+If n = 4 then calls gp
+If n = 5 then calls staticscope  *)
+{
+    read (process);
+    if (process = 1) then {
+        call fibonaci;
+    }
+    else {
+        if (process = 2) then {
+            call isprime;
+        }
+        else {
+            if (process = 3) then {
+                call factorial;
+            }
+            else {
+                if (process = 4) then {
+                    call gp;
+                }
+                else {
+                    if (process = 5) then {
+                        x := 0;
+                        call staticscope;
+                    }
+                    else {
+                        print(0);
+                    } fi;
+                } fi;
+            } fi;
+        } fi;
+    } fi;
+}

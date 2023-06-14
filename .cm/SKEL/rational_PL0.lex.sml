@@ -1,0 +1,2 @@
+Skeleton 5
+ae"Rational_PL0LexFun"i2aä¢Tokens"gp1c"Rational_PL0_TOKENS"f6d"Int"Cd"List"ä¢String"d"TextIO"ä¢Vector"d"Array"Nh3aä¢UserDeclarations"h4aä¢T"gp1ÿaä¢KeyWord"jè0ÿ‚egp1ÿ‚f1ä¢BigInt"aä¢Internal"h1aä¢StartStates"ÿ‚bbbbd2bc2egp1ÿ2egp2ÿ‚5ÿƒf4ÿ‚d"Rational"ÿ‚5ÿ‚+f2ä¢Unsafe"ÿ‚5f6d"Char"Cÿÿ2ÿ„ÿÿ‚5Næ0ÿ„,ÿ„,

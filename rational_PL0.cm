@@ -1,0 +1,35 @@
+(* Rational_PL0.cm Build Project *)
+
+Library
+    structure Rational_PL0
+    structure Interpreter
+is
+    rational.sml
+    datatypes.sml
+    rational_PL0.lex
+    rational_PL0.yacc:MLYacc
+    glue.sml
+    compiler.sml
+    $/basis.cm
+    $/ml-yacc-lib.cm
+    $smlnj/compiler/compiler.cm
+    $SMLNJ-LIB/Util/smlnj-lib.cm
+    (* For Control.Print.printDepth := 25 *)
+    $smlnj/smlnj-lib/controls-lib.cm
+    $SMLNJ-LIB/Controls/controls-lib.cm
+    $SMLNJ-MLRISC/Control.cm
+    $smlnj/MLRISC/Control.cm
+    $smlnj/viscomp/debugprof.cm
+    $SMLNJ-LIB/HTML/html-lib.cm
+    $SMLNJ-LIB/PP/pp-lib.cm
+    $smlnj/compiler/current.cm
+    $smlnj/compiler/x86.cm
+    $smlnj/viscomp/core.cm
+    $smlnj/viscomp/basics.cm
+    $smlnj/viscomp/elabdata.cm
+    $smlnj/viscomp/elaborate.cm
+    $SMLNJ-BASIS/basis.cm
+    $SMLNJ-BASIS/basis-common.cm
+    $smlnj/MLRISC/Lib.cm
+    $SMLNJ-MLRISC/Lib.cm
+    $smlnj/smlnj-lib/pp-lib.cm

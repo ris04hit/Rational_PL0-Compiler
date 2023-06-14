@@ -1,0 +1,73 @@
+(*
+    Example Program in the Rational-PL0 Language. Points to pay attention to:
+    1. The order of declarations is determined by the grammar - Rational, Integer, Boolean and then Procedures.
+    2. No implicit type casting. Cannot compare integers to booleans, cannot assign integers to rationals.
+    3. There are two ways to create rationals in this language:
+        a. The make_rat function of type integer*integer -> rational (note that arguments can be expressions too)
+        b. The fromDecimal function takes the standard decimal form representation of a rational and returns an object of type rational.
+    4. The print command should add a newline after printing whatever expression it has been passed.
+    5. For integer expressions, the output of print should be an integer, for rationals it should print in standard decimal form, and for booleans it should print tt/ff.
+    6. The read command, if reading an integer variable, expects an integer, for rationals expects it in standard decimal form and for booleans expects tt/ff.
+*)
+
+rational powerArg1, powerResult;
+integer powerArg2, factorialArg,
+        factorialResult;
+
+procedure factorial
+    integer i , acc;
+    {
+        i := factorialArg;
+        acc := 1;
+        while (i > 0) do
+        {
+            acc := acc*i;
+            i := i-1;
+        } od;
+        factorialResult := acc;
+    };
+
+procedure power
+    integer i;
+    boolean cond;
+    {
+        i := 0;
+        powerResult := make_rat(1,1);
+        powerResult := fromDecimal(1.0(0));
+        cond := i<powerArg2;
+        while (cond = tt) do
+        {
+            powerResult := powerResult .*. powerArg1;
+            i := i+1;
+            cond := i<powerArg2;
+        } od;
+    }
+;
+
+procedure boolProc
+    integer n;
+    boolean expectedResult;
+    {
+        read(n);
+        read(expectedResult);
+        if ((n % 2 = 0) = expectedResult) then {
+            print(1);
+        } else {
+            print(0);
+        } fi;
+    };
+
+{
+    read(factorialArg);
+    call factorial;
+    print ( factorialResult );
+
+    read(powerArg1);
+    read(
+        powerArg2
+    );
+    call power;
+    print (powerResult);
+
+    call boolProc;
+}

@@ -1,0 +1,2 @@
+Skeleton 5
+d4f6d"Int"Cd"List"d"String"d"TextIO"d"DataTypes"d"Rational"Cd"HashTable"d"HashString"d"Rational_PL0Parser"d"BigInt"d"Control"Nad"Rational_PL0"jè0ÿ‚aã¢INTERPRETER"ÿ‚ad"Interpreter"jÿ‚gp1ÿ‚

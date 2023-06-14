@@ -1,0 +1,2 @@
+Skeleton 5
+d3aä¢Rational_PL0LrVals"jh1aä¢Token"gp2ä¢LrParser"ÿgp1e"Rational_PL0LrValsFun"aä¢Rational_PL0Lex"jh1aä¢Tokens"gp2ÿÿ&gp1e"Rational_PL0LexFun"ad"Rational_PL0Parser"jh3aä¢ParserData"gp2ÿÿ‚)ad"Lex"gp1ÿaÿ'gp1ÿ'gp1e"JoinWithArg"
